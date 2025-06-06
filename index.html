@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'comic sans ms', cursive, sans-serif;
-            text-align: black;
+        
             background: black;
             background-size: cover;
             color: white;
@@ -27,7 +27,7 @@
             border: none;
             border-radius: 12px;
             cursor: pointer;
-            margin: 10px;
+            margin: 20px;
             transition: 0.3s;
         }
 
@@ -50,30 +50,25 @@
             padding: 10px 20px;
             font-size: 16px;
         }
-
-        @media (max-width: 300px) {
-            h1 {
-                display: flex;
-                font-size: 2em;
-            }
-        }
     </style>
 </head>
 
 <body>
     <h1>Você quer namorar cmg?💘</h1>
     <a href="sim.html"> <button class="btn yes">SIM😍</button></a>
-    <button class="btn no" id="nobtn">NÃO😪</button>
+    <button class="btn no" id="noBtn">NÃO😪</button>
     <script>
         // Função para mover o botão "NÃO" para uma posição aleatória
-        const nobtn = document.getElementById('nobtn');
-        nobtn.addEventListener('mouseover', function () {
-            const x = Math.random() * (window.innerWidth - 100);
-            const y = Math.random() * (window.innerHeight- 50);
-            // Ajusta a posição do botão para que ele não saia da tela
-            nobtn.style.left = x + 'px';
-            nobtn.style.top = y + 'px';
-        });
+        const nobtn = document.getElementById('noBtn');
+        noBtn.addEventListener('mouseover', () => {
+            // Gera uma posição aleatória dentro dos limites da janela
+            // Subtrai 100 e 50 para evitar que o botão saia da tela{
+                const x = Math.random() * (window.innerWidth - 100);
+                const y = Math.random() * (window.innerHeight - 50);
+                // Ajusta a posição do botão para que ele não saia da tela
+                nobtn.style.left = x + 'px';
+                nobtn.style.top = y + 'px';
+            });
     </script>
 
 
